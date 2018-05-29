@@ -6,6 +6,7 @@ if(isset($_GET['user']) && intval($_GET['user'])) {
 	$number_of_posts = isset($_GET['num']) ? intval($_GET['num']) : 10; //10 is the default
 	$format = strtolower($_GET['format']) == 'json' ? 'json' : 'xml'; //xml is the default
 	$user_id = intval($_GET['user']); //no default
+	$domain = intval($_GET['domain']); //no default
 
   /* create array */
 	$posts = array(
