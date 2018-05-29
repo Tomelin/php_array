@@ -1,6 +1,6 @@
 <?php
 /* require the user as the parameter */
-if(isset($_GET['user']) && intval($_GET['user'])) {
+if(isset($_GET['user']) && intval($_GET['num'])) {
 
 	/* soak in the passed variable or set our own */
 	$number_of_posts = isset($_GET['num']) ? intval($_GET['num']) : 10; //10 is the default
