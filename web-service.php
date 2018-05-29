@@ -12,6 +12,7 @@ if(isset($_GET['user']) && intval($_GET['num'])) {
 	$posts = array(
 		"num" => $number_of_posts,
 		"user" => $user_id,
+		"domain" => $domain,
 	);
 
 	/* output in necessary format */
