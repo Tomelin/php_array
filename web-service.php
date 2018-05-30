@@ -1,9 +1,9 @@
 <?php
 /* require the user as the parameter */
-if(isset($_GET['domain']) && isset($_GET['software']) && is_numeric($_GET['version'])) {
+if(isset($_GET['domain']) && isset($_GET['software']) && isset($_GET['version'])) {
 
 	/* soak in the passed variable or set our own */
-	$version = isset($_GET['version']) ? is_numeric($_GET['version']) : 0; //0 is the default
+	$version = $_GET['version']; //0 is the default
 	$format = strtolower($_GET['format']) == 'json' ? 'json' : 'xml'; //xml is the default
 	$software = $_GET['software']; //no default
 	$domain = $_GET['domain']; //no default
