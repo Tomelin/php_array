@@ -1,17 +1,17 @@
 <?php
 /* require the user as the parameter */
-if(isset($_GET['user']) && intval($_GET['num'])) {
+if(isset($_GET['domain']) && isset($_GET['software']) && isset($_GET['version'])) {
 
 	/* soak in the passed variable or set our own */
-	$number_of_posts = isset($_GET['num']) ? intval($_GET['num']) : 10; //10 is the default
+	$version = isset($_GET['version']) ? intval($_GET['version']) : 10; //10 is the default
 	$format = strtolower($_GET['format']) == 'json' ? 'json' : 'xml'; //xml is the default
-	$user_id = $_GET['user']; //no default
+	$software = $_GET['software']; //no default
 	$domain = $_GET['domain']; //no default
 
   /* create array */
 	$posts = array(
-		"num" => $number_of_posts,
-		"user" => $user_id,
+		"version" => $version,
+		"software" => $software,
 		"domain" => $domain,
 	);
 
